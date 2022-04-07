@@ -1,47 +1,46 @@
-var time = moment().format("MMM Do YYYY")
+var time = moment();
+$("#currentDay").text(time.format("MMM Do, YYYY"));
 
-$("#currentDay").text(time);
+// $(document).ready(function() {
+//     $(".saveBtn").on("click", function())
+//     var value = $(this).sibling(".information").val();
+//     var time = $(this).parent().attr("id");
+//     localStorage.setItem(time, value)
+// })
 
-$(document).ready(function() {
-    $(".saveBtn").on("click", function())
-    var value = $(this).sibling(".information").val();
-    var time = $(this).parent().attr("id");
-    localStorage.setItem(time, value)
-})
+// function colorUpdater() {
+// var currentHour = moment().hours();
 
-function colorUpdater() {
-var currentHour = moment().hours();
+//     $(".time-block").each(function() {
+//     var blockTime =
+//     })
+//     if (blockTime < currentHour) {
 
-    $(".time-block").each(function() {
-    var blockTime =
-    })
-    if (blockTime < currentHour) {
+//     } else if () {
 
-    } else if () {
+//     } else {
 
-    } else {
+//     }
+// }
 
-    }
-}
+// function colorUpdater() {
+// var now = new Date().getHours();
 
-function colorUpdater() {
-var now = new Date().getHours();
+//     if (now > 9) {
+//         $("#9AM").addClass("past");
+//     }   else if (now >= 9 && now < 10) {
+//             $("#9AM").addClass("present");
+//         } else {
+//             $("9AM").addClass("future");
+//         }
+// };
 
-    if (now > 9) {
-        $("#9AM").addClass("past");
-    }   else if (now >= 9 && now < 10) {
-            $("#9AM").addClass("present");
-        } else {
-            $("9AM").addClass("future");
-        }
-};
+// colorUpdater();
 
-colorUpdater();
+// var interval = setInterval(colorUpdater, 15000);
 
-var interval = setInterval(colorUpdater, 15000);
+// $("#hour-nine .information").val(localStorage.getItem("hour-nine"));
 
-$("#hour-nine .information").val(localStorage.getItem("hour-nine"));
+// $("#currentDay").text(moment().format("MMM Do YYYY"));
 
-$("#currentDay").text(moment().format("MMM Do YYYY"));
-
-});
+// });
