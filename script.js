@@ -8,20 +8,23 @@ $("#currentDay").text(time.format("MMM Do, YYYY"));
 //     localStorage.setItem(time, value)
 // })
 
-// function colorUpdater() {
-// var currentHour = moment().hours();
+function colorUpdater() {
+var currentHour = moment().hours();
 
-//     $(".time-block").each(function() {
-//     var blockTime =
-//     })
-//     if (blockTime < currentHour) {
+    $(".time-block").each(function() {
+    var blockTime = 
+    })
+    if (blockTime < currentHour) {
+        .addClass("past");
 
-//     } else if () {
+    } else if (blockTime > currentHour) {
+        .addClass("future");
 
-//     } else {
+    } else {
+        .addClass("present");
 
-//     }
-// }
+    }
+}
 
 // function colorUpdater() {
 // var now = new Date().getHours();
