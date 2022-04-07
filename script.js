@@ -11,32 +11,56 @@ $("#currentDay").text(time.format("MMM Do, YYYY"));
 function colorUpdater() {
 var currentHour = moment().hours();
 
-    $(".time-block").each(function() {
-    var blockTime = 
-    })
-    if (blockTime < currentHour) {
-        .addClass("past");
+$(".time-block").each(function() {
 
-    } else if (blockTime > currentHour) {
-        .addClass("future");
+    if (currentHour > 9) {
+        $("#hour-nine").addClass(".past");
+    }   else if  (currentHour >= 9 && currentHour < 10) {
+        $("#hour-nine").addClass(".present");
+        } else {
+        $("#hour-nine").addClass(".future");
+        }
+    
 
-    } else {
-        .addClass("present");
+    if (currentHour > 10) {
+        $("#hour-ten").addClass(".past");
+    }   else if  (currentHour >= 9 && currentHour < 10) {
+        $("#hour-ten").addClass(".present");
+        } else {
+        $("#hour-ten").addClass(".future");
+        }
+    
+    
+        if (currentHour > 11) {
+            $("#hour-eleven").addClass(".past");
+        }   else if  (currentHour >= 9 && currentHour < 10) {
+            $("#hour-eleven").addClass(".present");
+            } else {
+            $("#hour-eleven").addClass(".future");
+            }
+        });
 
-    }
 }
+
+
+
+    //
+    // var blockTime = 
+    // })
+    // if (blockTime < currentHour) {
+    //     .addClass("past");
+
+    // } else if (blockTime > currentHour) {
+    //     .addClass("future");
+
+    // } else {
+    //     .addClass("present");
+
+    // }
 
 // function colorUpdater() {
 // var now = new Date().getHours();
-
-//     if (now > 9) {
-//         $("#9AM").addClass("past");
-//     }   else if (now >= 9 && now < 10) {
-//             $("#9AM").addClass("present");
-//         } else {
-//             $("9AM").addClass("future");
-//         }
-// };
+// 
 
 // colorUpdater();
 
@@ -45,5 +69,3 @@ var currentHour = moment().hours();
 // $("#hour-nine .information").val(localStorage.getItem("hour-nine"));
 
 // $("#currentDay").text(moment().format("MMM Do YYYY"));
-
-// });
