@@ -1,5 +1,6 @@
 var time = moment();
-$("#currentDay").text(time.format("MMM Do, YYYY"));
+$("#currentDay").text(time.format("MMM Do, YYYY hh:mm:ss a"));
+var interval = setInterval(colorUpdater, 1000);
 
 $(document).ready(function() {
     $(".saveBtn").on("click", function() {
@@ -30,38 +31,70 @@ var currentHour = moment().hours();
     
         if (currentHour > 11) {
         $("#hour-eleven").addClass(".past");
-    }   else if  (currentHour >= 9 && currentHour < 10) {
+    }   else if  (currentHour >= 10 && currentHour < 11) {
         $("#hour-eleven").addClass(".present");
         } else {
         $("#hour-eleven").addClass(".future");
         }
+
+        if (currentHour > 12) {
+        $("#hour-twelve").addClass(".past");
+    }   else if  (currentHour >= 12 && currentHour < 13) {
+        $("#hour-twelve").addClass(".present");
+        } else {
+        $("#hour-twelve").addClass(".future");
+        }
+    
+        if (currentHour > 1) {
+        $("#hour-one").addClass(".past");
+    }   else if  (currentHour >= 1 && currentHour < 2) {
+        $("#hour-one").addClass(".present");
+        } else {
+        $("#hour-one").addClass(".future");
+        }
+ 
+        if (currentHour > 2) {
+        $("#hour-two").addClass(".past");
+    }   else if  (currentHour >= 2 && currentHour < 3) {
+        $("#hour-two").addClass(".present");
+        } else {
+        $("#hour-two").addClass(".future");
+        }
+  
+        if (currentHour > 3) {
+        $("#hour-three").addClass(".past");
+    }   else if  (currentHour >= 3 && currentHour < 4) {
+        $("#hour-three").addClass(".present");
+        } else {
+        $("#hour-three").addClass(".future");
+        }
+            
+        if (currentHour > 4) {
+        $("#hour-four").addClass(".past");
+    }   else if  (currentHour >= 4 && currentHour < 5) {
+        $("#hour-four").addClass(".present");
+        } else {
+        $("#hour-four").addClass(".future");
+        }
+        
+        if (currentHour > 5) {
+        $("#hour-five").addClass(".past");
+    }   else if  (currentHour >= 5 && currentHour < 6) {
+        $("#hour-five").addClass(".present");
+        } else {
+        $("#hour-five").addClass(".future");
+        }
+        
+
         };
 
 
 
 
 
-    //
-    // var blockTime = 
-    // })
-    // if (blockTime < currentHour) {
-    //     .addClass("past");
+colorUpdater();
 
-    // } else if (blockTime > currentHour) {
-    //     .addClass("future");
 
-    // } else {
-    //     .addClass("present");
-
-    // }
-
-// function colorUpdater() {
-// var now = new Date().getHours();
-// 
-
-// colorUpdater();
-
-// var interval = setInterval(colorUpdater, 15000);
 
 $("#hour-nine .information").val(localStorage.getItem("hour-nine"));
 $("#hour-ten .information").val(localStorage.getItem("hour-ten"));
