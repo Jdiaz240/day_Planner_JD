@@ -1,28 +1,26 @@
 var time = moment();
 $("#currentDay").text(time.format("MMM Do, YYYY"));
 
-// $(document).ready(function() {
-//     $(".saveBtn").on("click", function())
-//     var value = $(this).sibling(".information").val();
-//     var time = $(this).parent().attr("id");
-//     localStorage.setItem(time, value)
-// })
+$(document).ready(function() {
+    $(".saveBtn").on("click", function() {
+    var value = $(this).siblings(".information").val();
+    var time = $(this).parent().attr("id");
+    localStorage.setItem(time, value);
+    })
+});
 
 function colorUpdater() {
 var currentHour = moment().hours();
 
-$(".time-block").each(function() {
-
-    if (currentHour > 9) {
-        $("#hour-nine").addClass(".past");
+        if (currentHour > 9) {
+        $("#hour-nine").addClass("past");
     }   else if  (currentHour >= 9 && currentHour < 10) {
-        $("#hour-nine").addClass(".present");
+        $("#hour-nine").addClass("present");
         } else {
-        $("#hour-nine").addClass(".future");
+        $("#hour-nine").addClass("future");
         }
     
-
-    if (currentHour > 10) {
+        if (currentHour > 10) {
         $("#hour-ten").addClass(".past");
     }   else if  (currentHour >= 9 && currentHour < 10) {
         $("#hour-ten").addClass(".present");
@@ -30,17 +28,16 @@ $(".time-block").each(function() {
         $("#hour-ten").addClass(".future");
         }
     
-    
         if (currentHour > 11) {
-            $("#hour-eleven").addClass(".past");
-        }   else if  (currentHour >= 9 && currentHour < 10) {
-            $("#hour-eleven").addClass(".present");
-            } else {
-            $("#hour-eleven").addClass(".future");
-            }
-        });
+        $("#hour-eleven").addClass(".past");
+    }   else if  (currentHour >= 9 && currentHour < 10) {
+        $("#hour-eleven").addClass(".present");
+        } else {
+        $("#hour-eleven").addClass(".future");
+        }
+        };
 
-}
+
 
 
 
@@ -66,6 +63,12 @@ $(".time-block").each(function() {
 
 // var interval = setInterval(colorUpdater, 15000);
 
-// $("#hour-nine .information").val(localStorage.getItem("hour-nine"));
-
-// $("#currentDay").text(moment().format("MMM Do YYYY"));
+$("#hour-nine .information").val(localStorage.getItem("hour-nine"));
+$("#hour-ten .information").val(localStorage.getItem("hour-ten"));
+$("#hour-eleven .information").val(localStorage.getItem("hour-eleven"));
+$("#hour-twelve .information").val(localStorage.getItem("hour-twelve"));
+$("#hour-one .information").val(localStorage.getItem("hour-one"));
+$("#hour-two .information").val(localStorage.getItem("hour-two"));
+$("#hour-three .information").val(localStorage.getItem("hour-three"));
+$("#hour-four .information").val(localStorage.getItem("hour-four"));
+$("#hour-five .information").val(localStorage.getItem("hour-five"));
