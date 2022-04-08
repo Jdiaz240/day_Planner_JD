@@ -1,5 +1,5 @@
-var time = moment();
-$("#currentDay").text(time.format("MMM Do, YYYY hh:mm:ss a"));
+var time = moment(); //creates variable that displays current time
+$("#currentDay").text(time.format("MMM Do, YYYY hh:mm:ss a"));//asigns the currentDay Id to display the current time in the desired format onto the page.
 var interval = setInterval(colorUpdater, 1000);
 
 $(document).ready(function() {
@@ -10,17 +10,19 @@ $(document).ready(function() {
     })
 });
 
-function colorUpdater() {
-var currentHour = moment().hours();
+function colorUpdater() { //creates a fucntion to change the color of the time blocks as the day goes on 
+var currentHour = moment().hours(); //creates a variable so the js will always know what the hour is at time of use.
 
-        if (currentHour > 9) {
-        $("#hour-nine").addClass("past");
-    }   else if  (currentHour >= 9 && currentHour < 10) {
-        $("#hour-nine").addClass("present");
-        } else {
-        $("#hour-nine").addClass("future");
+    //creates and if statement that details the following
+        if (currentHour > 9) { //if the time right now is greater than 9
+        $("#hour-nine").addClass("past");//than add the css class of past to the class hour-nine
+    }   else if  (currentHour >= 9 && currentHour < 10) { //however if current hour is greater than or equal to 9 but still less than 10 
+        $("#hour-nine").addClass("present");//add the css class present
+        } else { //if neither of the previous parameters are met   
+        $("#hour-nine").addClass("future");//then add the class future.
         }
     
+    //repeat previous format for all of the follwing if statements.
         if (currentHour > 10) {
         $("#hour-ten").addClass("past");
     }   else if  (currentHour >= 9 && currentHour < 10) {
@@ -92,10 +94,10 @@ var currentHour = moment().hours();
 
 
 
-colorUpdater();
+colorUpdater(); //calls the function into action so that it displays on the page.
 
 
-
+//this pulls saved items of out the local storage on the page after refresh.
 $("#hour-nine .information").val(localStorage.getItem("hour-nine"));
 $("#hour-ten .information").val(localStorage.getItem("hour-ten"));
 $("#hour-eleven .information").val(localStorage.getItem("hour-eleven"));
