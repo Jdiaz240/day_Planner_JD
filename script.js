@@ -22,67 +22,67 @@ var currentHour = moment().hours();
         }
     
         if (currentHour > 10) {
-        $("#hour-ten").addClass(".past");
+        $("#hour-ten").addClass("past");
     }   else if  (currentHour >= 9 && currentHour < 10) {
-        $("#hour-ten").addClass(".present");
+        $("#hour-ten").addClass("present");
         } else {
-        $("#hour-ten").addClass(".future");
+        $("#hour-ten").addClass("future");
         }
     
         if (currentHour > 11) {
-        $("#hour-eleven").addClass(".past");
+        $("#hour-eleven").addClass("past");
     }   else if  (currentHour >= 10 && currentHour < 11) {
-        $("#hour-eleven").addClass(".present");
+        $("#hour-eleven").addClass("present");
         } else {
-        $("#hour-eleven").addClass(".future");
+        $("#hour-eleven").addClass("future");
         }
 
         if (currentHour > 12) {
-        $("#hour-twelve").addClass(".past");
+        $("#hour-twelve").addClass("past");
     }   else if  (currentHour >= 12 && currentHour < 13) {
-        $("#hour-twelve").addClass(".present");
+        $("#hour-twelve").addClass("present");
         } else {
-        $("#hour-twelve").addClass(".future");
+        $("#hour-twelve").addClass("future");
         }
     
         if (currentHour > 1) {
-        $("#hour-one").addClass(".past");
+        $("#hour-one").addClass("past");
     }   else if  (currentHour >= 1 && currentHour < 2) {
-        $("#hour-one").addClass(".present");
+        $("#hour-one").addClass("present");
         } else {
-        $("#hour-one").addClass(".future");
+        $("#hour-one").addClass("future");
         }
  
         if (currentHour > 2) {
-        $("#hour-two").addClass(".past");
+        $("#hour-two").addClass("past");
     }   else if  (currentHour >= 2 && currentHour < 3) {
-        $("#hour-two").addClass(".present");
+        $("#hour-two").addClass("present");
         } else {
-        $("#hour-two").addClass(".future");
+        $("#hour-two").addClass("future");
         }
   
         if (currentHour > 3) {
-        $("#hour-three").addClass(".past");
+        $("#hour-three").addClass("past");
     }   else if  (currentHour >= 3 && currentHour < 4) {
-        $("#hour-three").addClass(".present");
+        $("#hour-three").addClass("present");
         } else {
-        $("#hour-three").addClass(".future");
+        $("#hour-three").addClass("future");
         }
             
         if (currentHour > 4) {
-        $("#hour-four").addClass(".past");
+        $("#hour-four").addClass("past");
     }   else if  (currentHour >= 4 && currentHour < 5) {
-        $("#hour-four").addClass(".present");
+        $("#hour-four").addClass("present");
         } else {
-        $("#hour-four").addClass(".future");
+        $("#hour-four").addClass("future");
         }
         
         if (currentHour > 5) {
-        $("#hour-five").addClass(".past");
+        $("#hour-five").addClass("past");
     }   else if  (currentHour >= 5 && currentHour < 6) {
-        $("#hour-five").addClass(".present");
+        $("#hour-five").addClass("present");
         } else {
-        $("#hour-five").addClass(".future");
+        $("#hour-five").addClass("future");
         }
         
 
